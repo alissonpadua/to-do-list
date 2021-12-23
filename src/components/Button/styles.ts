@@ -8,6 +8,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Container = styled.button<ButtonProps>`
+  display: flex;
   background: none;
   padding: 10px;
   border: 0;
@@ -20,5 +21,11 @@ export const Container = styled.button<ButtonProps>`
 
   &:hover {
     background-color: ${props => shade(0.1, props.background)};
+  }
+  &:disabled {
+    color: #ddd;
+  }
+  svg {
+    align-self: center;
   }
 `;
